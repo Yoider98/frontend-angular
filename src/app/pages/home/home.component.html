@@ -1,0 +1,17 @@
+<div class="home-container">
+  <div *ngIf="scraping" class="loader-container">
+    <div class="spinner"></div>
+    <p class="loader-text">Cargando libros...</p>
+  </div>
+
+  <div *ngIf="!scraping" class="filters-container">
+    <input type="text" placeholder="Categoría" class="filter-input" [(ngModel)]="categoria">
+    <input type="number" placeholder="Precio mínimo" class="filter-input" [(ngModel)]="precioMin">
+    <input type="number" placeholder="Precio máximo" class="filter-input" [(ngModel)]="precioMax">
+    <button class="filter-btn" (click)="filtrar()">Filtrar</button>
+    <button class="scrape-btn" (click)="iniciarScraping()">Scrapear libros</button>
+  </div>
+  <div class="list-section">
+    <app-book-list [filters]="filters"></app-book-list>
+  </div>
+</div> 

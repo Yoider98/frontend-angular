@@ -1,0 +1,6 @@
+<div class="filters-container">
+  <input type="text" placeholder="Categoría" class="filter-input" [(ngModel)]="category">
+  <input type="number" placeholder="Precio mínimo" class="filter-input" [(ngModel)]="priceMin">
+  <input type="number" placeholder="Precio máximo" class="filter-input" [(ngModel)]="priceMax">
+  <button class="filter-btn" (click)="filtrar()">Filtrar</button>
+</div> 

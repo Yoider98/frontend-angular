@@ -1,0 +1,23 @@
+<div class="book-list-container">
+  <h2>Libros</h2>
+  <table class="book-table">
+    <thead>
+      <tr>
+        <th>Título</th>
+        <th>Categoría</th>
+        <th>Precio</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let book of books">
+        <td>{{ book.title }}</td>
+        <td>{{ book.category }}</td>
+        <td>{{ book.price | currency:'USD' }}</td>
+        <td>
+          <button (click)="verDetalle(book)">Ver detalle</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div> 

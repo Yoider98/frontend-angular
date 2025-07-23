@@ -1,0 +1,15 @@
+<div class="book-detail-modal-container">
+  <h1>{{ data.book.title }}</h1>
+  <div class="book-detail-info">
+    <p><strong>Precio:</strong> {{ data.book.price | currency:'USD' }}</p>
+    <p><strong>Rating:</strong> {{ data.book.rating }}</p>
+    <p><strong>Stock:</strong> {{ data.book.stock }}</p>
+    <p><strong>Categoría:</strong> {{ data.book.category }}</p>
+  </div>
+  <div class="modal-actions">
+    <button mat-stroked-button color="primary" (click)="dialogRef.close()">Cerrar</button>
+    <button mat-raised-button color="warn" (click)="onDelete()" [disabled]="deleting">
+      {{ deleting ? 'Eliminando...' : 'Eliminar libro' }}
+    </button>
+  </div>
+</div> 
